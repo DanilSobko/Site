@@ -207,6 +207,8 @@ footer {
     }
 }
 
+/* --- Адаптація --- */
+
 /* Адаптація для телефонів (до 768px) */
 @media (max-width: 768px) {
     body {
@@ -234,6 +236,7 @@ footer {
 
     nav ul li {
         margin: 5px 0;
+        width: 100%;
     }
 
     nav ul li a {
@@ -262,20 +265,45 @@ footer {
 
     .laba-tasks, .practical-tasks {
         flex-direction: column;
+        width: 100%;
+    }
+
+    .laba-task, .practical-task {
+        width: 100%;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+        gap: 10px;
     }
 
     .laba-task img, .practical-task img {
         width: 100%;
         height: auto;
-        margin-bottom: 10px;
+        object-fit: cover;
     }
 
-    .laba-task, .practical-task {
-        padding: 10px;
+    /* Для кнопок в картках */
+    .laba-task .button, .practical-task .button {
+        width: 100%; /* Розтягуємо кнопку на всю ширину */
+        text-align: center; /* Вирівнюємо текст по центру */
+        padding: 12px;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    .laba-task .button:hover, .practical-task .button:hover {
+        background-color: #0056b3;
+        transition: 0.3s;
     }
 
     footer {
         font-size: 12px;
         padding: 10px;
+        text-align: center;
     }
 }
