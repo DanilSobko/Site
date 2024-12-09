@@ -283,35 +283,39 @@ footer {
         object-fit: cover;
     }
 
-    /* Для кнопок в картках */
-    .practical-task .button {
-        width: 100%; /* Розтягуємо кнопку на всю ширину */
-        text-align: center; /* Вирівнюємо текст по центру */
-        padding: 12px;
-        background-color: #007bff;
-        color: white;
-        text-decoration: none;
-        border-radius: 4px;
-        font-weight: bold;
-        margin-top: 10px;
-    }
+    /* Для контейнерів з картками Практичні та Лабораторні роботи */
+.laba-tasks, .practical-tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: hidden; /* Забороняємо вихід за межі */
+}
 
-    .practical-task .button:hover {
-        background-color: #0056b3;
-        transition: 0.3s;
-    }
+/* Для карток в блоці з лабораторними роботами */
+.laba-task, .practical-task {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Переміщаємо в одну колонку */
+    gap: 20px;
+    align-items: center; /* Центруємо вміст */
+    width: 100%; /* Розтягуємо картки на всю ширину контейнера */
+    box-sizing: border-box; /* Враховуємо відступи при обчисленні ширини */
+}
 
-    footer {
-        font-size: 12px;
-        padding: 10px;
-        text-align: center;
-    }
+/* Для фото в картках */
+.laba-task img, .practical-task img {
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
 /* Для кнопок в лабораторних роботах */
-.laba-task .button {
-    width: 100%; /* Розтягуємо кнопку на всю ширину */
-    text-align: center; /* Вирівнюємо текст по центру */
+.laba-task .button, .practical-task .button {
+    width: 100%; /* Розтягуємо кнопки на всю ширину */
     padding: 12px;
     background-color: #007bff;
     color: white;
@@ -319,9 +323,22 @@ footer {
     border-radius: 4px;
     font-weight: bold;
     margin-top: 10px;
+    text-align: center;
 }
 
-.laba-task .button:hover {
+.laba-task .button:hover, .practical-task .button:hover {
     background-color: #0056b3;
     transition: 0.3s;
 }
+
+/* Для секцій Практичні та Лабораторні роботи */
+section {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1200px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Враховуємо відступи */
+}
+
